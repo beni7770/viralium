@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viralium - הטוקן הוויראלי שלך</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e0ffe0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1, h2 {
+      color: #00ff88;
+    }
+    .button {
+      background-color: #00ff88;
+      color: #000;
+      padding: 1em 2em;
+      border: none;
+      border-radius: 5px;
+      margin: 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .faq {
+      background-color: #111;
+      border-radius: 10px;
+      padding: 1em;
+      margin: 2em auto;
+      max-width: 600px;
+      text-align: right;
+    }
+    .timer {
+      font-size: 2em;
+      margin: 1em 0;
+    }
+    .email {
+      margin: 2em 0;
+    }
+    input[type=email] {
+      padding: 0.5em;
+      width: 250px;
+      margin-left: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>VIRALIUM</h1>
+  <h2>הטוקן שנועד להתפשט — ולפצות</h2>
+  <p>
+    הגיע הזמן להרוויח מהצד החכם של הקריפטו. Viralium נולד כדי להיות ויראלי – ולהפוך כל אחד לחלק מהבום הבא.
+  </p>
+  <h3>למה Viralium?</h3>
+  <ul style="list-style: none;">
+    <li>✔️ על רשת BSC – עמלות גז אפסיות</li>
+    <li>✔️ 30 מיליון טוקנים בלבד</li>
+    <li>✔️ פונקציית Burn – להעלאת ערך</li>
+    <li>✔️ שקיפות מלאה – בלי הפתעות</li>
+    <li>✔️ קהילה חיה – טלגרם, טוויטר</li>
+  </ul>
+  <div class="timer" id="countdown"></div>
+  <div class="email">
+    <label>הכנס כתובת מייל:</label>
+    <input type="email" placeholder="you@example.com">
+    <button class="button">הרשמה לעדכונים</button>
+  </div>
+  <div class="faq">
+    <h3>שאלות נפוצות</h3>
+    <p><strong>מה זה Viralium?</strong><br>טוקן חדש על BSC עם פוטנציאל להפוך לוויראלי ורווחי.</p>
+    <p><strong>איפה קונים אותו?</strong><br>ב-PancakeSwap בעת ההשקה.</p>
+    <p><strong>למה פונקציית Burn?</strong><br>כדי להקטין היצע ולהעלות ערך למשקיעים.</p>
+    <p><strong>מי מאחורי זה?</strong><br>צוות של יזמים חכמים שרוצים להרים אותך כלכלית.</p>
+  </div>
+  <div>
+    <button class="button">קנה את VIR</button>
+    <button class="button">הצטרף לקהילה</button>
+  </div>
+  <script>
+    const countdown = document.getElementById("countdown");
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 7);
+    function updateCountdown() {
+      const now = new Date();
+      const diff = launchDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      countdown.innerText = `ההשקה בעוד: ${days} ימים ${hours} שעות ${minutes} דקות ${seconds} שניות`;
+    }
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
