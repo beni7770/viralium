@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viralium - Your Viral Token</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e0ffe0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1, h2 {
+      color: #00ff88;
+    }
+    .button {
+      background-color: #00ff88;
+      color: #000;
+      padding: 1em 2em;
+      border: none;
+      border-radius: 5px;
+      margin: 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .faq {
+      background-color: #111;
+      border-radius: 10px;
+      padding: 1em;
+      margin: 2em auto;
+      max-width: 600px;
+      text-align: left;
+    }
+    .timer {
+      font-size: 2em;
+      margin: 1em 0;
+    }
+    .email {
+      margin: 2em 0;
+    }
+    input[type=email] {
+      padding: 0.5em;
+      width: 250px;
+      margin-left: 1em;
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 2em;
+    }
+    .nav img {
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html"><img src="https://flagcdn.com/w40/il.png" alt="Hebrew"></a>
+    <a href="index-en.html"><img src="https://flagcdn.com/w40/us.png" alt="English"></a>
+  </div>
+
+  <h1>VIRALIUM</h1>
+  <h2>The token built to go viral – and reward you</h2>
+  <p>
+    Time to profit from the smart side of crypto. Viralium was born to go viral – and make you part of the next boom.
+  </p>
+
+  <h3>Why Viralium?</h3>
+  <ul style="list-style: none;">
+    <li>✔️ Built on BSC – low gas fees</li>
+    <li>✔️ Only 30 million tokens</li>
+    <li>✔️ Burn function – increase value</li>
+    <li>✔️ Full transparency – no surprises</li>
+    <li>✔️ Active community – Telegram, Twitter</li>
+  </ul>
+
+  <div class="timer" id="countdown"></div>
+
+  <div class="email">
+    <label>Enter your email:</label>
+    <input type="email" placeholder="you@example.com">
+    <button class="button">Subscribe</button>
+  </div>
+
+  <div class="faq">
+    <h3>FAQ</h3>
+    <p><strong>What is Viralium?</strong><br>A new token on BSC with viral and profitable potential.</p>
+    <p><strong>Where can I buy it?</strong><br>On PancakeSwap at launch.</p>
+    <p><strong>Why burn function?</strong><br>To reduce supply and raise value for early adopters.</p>
+    <p><strong>Who's behind it?</strong><br>A team of smart entrepreneurs looking to help you grow financially.</p>
+  </div>
+
+  <div>
+    <button class="button">Buy VIR</button>
+    <button class="button">Join the Community</button>
+  </div>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 7);
+    function updateCountdown() {
+      const now = new Date();
+      const diff = launchDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      countdown.innerText = `Launch in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
